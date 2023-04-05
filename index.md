@@ -23,4 +23,8 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-## ![cat image](./public/images/cat.jpg)
+<BananeImage />
+
+<script setup>
+  import BananeImage from './components/bananeImage.vue'
+</script>

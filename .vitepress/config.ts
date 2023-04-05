@@ -12,6 +12,13 @@ export default defineConfig({
         text: "前端",
         items: [
           {
+            text: "基础",
+            items: [
+              { text: "javascript", link: "/web/basic/js" },
+              { text: "css", link: "/web/basic/css" },
+            ],
+          },
+          {
             text: "框架",
             items: [
               { text: "vue", link: "/web/vue/vue3" },
@@ -44,6 +51,13 @@ export default defineConfig({
         },
       ],
       "/web/": [
+        {
+          text: "基础",
+          items: [
+            { text: "javascript", link: "/web/basic/js" },
+            { text: "css", link: "/web/basic/css" },
+          ],
+        },
         {
           text: "框架",
           items: [
