@@ -61,8 +61,19 @@ export default defineConfig({
         {
           text: "框架",
           items: [
-            { text: "vue", link: "/web/vue/vue3" },
-            { text: "react", link: "/web/react/index" },
+            {
+              text: "vue",
+              link: "/web/vue/vue3",
+              items: [{ text: "vue3", link: "/web/vue/vue3" }],
+            },
+            {
+              text: "react",
+              link: "/web/react/index",
+              items: [
+                { text: "guide", link: "/web/react/index" },
+                { text: "hooks", link: "/web/react/hooks" },
+              ],
+            },
           ],
         },
         {

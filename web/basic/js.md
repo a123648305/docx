@@ -393,6 +393,78 @@ Object.__proto__ === Function.prototyp;
 
 ## 继承
 
+es5 继承的几种方法
+
+```js
+// 定义父类构造函数
+function Parent(name) {
+  this.name = name; // 公有属性
+  // let sex = "men"; // 私有属性
+}
+Parent.prototype.say = function (msg) {
+  console.log(msg);
+};
+//静态成员 对应class 里的static
+Parent.walk = function () {
+  console.log("static");
+};
+```
+
+- 借用 call 继承
+
+  ```js
+  function Son(name, age) {
+    this.age = age;
+    Parent.call(this, name);
+  }
+
+  const instance = new Son(11, 22);
+  ```
+
+  :::warning
+  无法继承父类的原型方法
+  :::
+
+- 借用原型链 继承
+
+  ```js
+  function Son(name, age) {
+    this.age = age;
+  }
+  Son.prototype = new Parent();
+  ```
+
+  :::warning
+  可以访问父类的方法和原型，但多个实例会共享同一个对象
+  :::
+
+- 组合式 继承
+
+  ```js
+  function Son(name, age) {
+    this.age = age;
+    Parent.call(this, name);
+  }
+  Son.prototype = new Parent();
+  ```
+
+  :::warning
+  通过组合上面 2 种方式，可以正常继承，但存在调用了 2 次父类的构造函数
+  :::
+
+- 寄生组合 继承
+  ```js
+  function Son(name, age) {
+    this.age = age;
+    Parent.call(this, name);
+  }
+  Son.prototype = Object.create(Parent.prototype);
+  Son.prototype.constructor = Son;
+  ```
+  :::warning
+  通过对组合式继承进行优化，得到最接近 es6 calss 的继承方式
+  :::
+
 ```
 
 ```
