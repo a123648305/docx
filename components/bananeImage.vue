@@ -8,7 +8,6 @@
 
 <style lang="sass" scoped>
 .image_box
-  width: 100%
   margin: 10px
   img
     margin: auto
