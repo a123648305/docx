@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { pagefindPlugin } from "vitepress-plugin-pagefind";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -90,6 +91,11 @@ export default defineConfig({
     footer: {
       message: "Released under the MIT License.",
       copyright: "Copyright © 2023-present wxs",
+      // algolia: {
+      //   appId: "8J64VVRP8K",
+      //   apiKey: "a18e2f4cc5665f6602c5631fd868adfd",
+      //   indexName: "vitepress",
+      // },
     },
     lastUpdatedText: "Updated Date",
     // carbonAds: {
@@ -100,5 +106,15 @@ export default defineConfig({
     //   prev: "Pagina prior",
     //   next: "Proxima pagina",
     // },
+  },
+  vite: {
+    plugins: [
+      pagefindPlugin({
+        btnPlaceholder: "搜索",
+        placeholder: "搜索文档",
+        emptyText: "没有匹配搜索结果",
+        heading: "共: {{searchResult}} 条结果",
+      }),
+    ],
   },
 });
