@@ -36,7 +36,7 @@ export default defineConfig({
           },
         ],
       },
-      { text: "算法", link: "/markdown-examples" },
+      { text: "算法", link: "/algorithm/index" },
       { text: "后端", link: "/api-examples" },
       { text: "部署", link: "//ccc" },
       { text: "数据库", link: "//ccc" },
@@ -88,6 +88,24 @@ export default defineConfig({
         {
           text: "浏览器",
           items: [{ text: "Chrom", link: "/web/chrom" }],
+        },
+      ],
+      "/algorithm/": [
+        {
+          text: "首页",
+          link: "/algorithm/index",
+        },
+        {
+          text: "链表",
+          link: "/algorithm/链表",
+        },
+        {
+          text: "树",
+          link: "/algorithm/树",
+        },
+        {
+          text: "双指针",
+          link: "/web/双指针",
         },
       ],
     },
