@@ -27,8 +27,12 @@ export default defineConfig({
             ],
           },
           {
+            text: "手写代码",
+            link: "/web/write",
+          },
+          {
             text: "浏览器",
-            items: [{ text: "Chrome", link: "/web/vue/vue3" }],
+            items: [{ text: "Chrome", link: "/web/chrom" }],
           },
         ],
       },
@@ -76,6 +80,10 @@ export default defineConfig({
               ],
             },
           ],
+        },
+        {
+          text: "手写代码",
+          link: "/web/write",
         },
         {
           text: "浏览器",
