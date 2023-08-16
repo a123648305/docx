@@ -38,7 +38,7 @@ export default defineConfig({
       },
       { text: "算法", link: "/algorithm/index" },
       { text: "后端", link: "/api-examples" },
-      { text: "部署", link: "//ccc" },
+      { text: "部署", link: "/deploy/index" },
       { text: "数据库", link: "//ccc" },
       { text: "计算机网络", link: "//ccc" },
       { text: "分享", link: "/webintro" },
@@ -106,6 +106,20 @@ export default defineConfig({
         {
           text: "双指针",
           link: "/web/双指针",
+        },
+      ],
+      "/deploy/": [
+        {
+          text: "概览",
+          link: "/deploy/index",
+        },
+        {
+          text: "docker",
+          link: "/deploy/docker",
+        },
+        {
+          text: "k8s",
+          link: "/deploy/k8s",
         },
       ],
     },
