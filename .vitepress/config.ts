@@ -41,12 +41,12 @@ export default defineConfig({
       { text: "部署", link: "//ccc" },
       { text: "数据库", link: "//ccc" },
       { text: "计算机网络", link: "//ccc" },
-      { text: "分享", link: "//ccc" },
+      { text: "分享", link: "/webintro" },
       { text: "About", link: "/about" },
     ],
 
     sidebar: {
-      "/": [
+      "/exaple": [
         {
           text: "Examples",
           items: [
