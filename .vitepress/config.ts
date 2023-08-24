@@ -31,6 +31,10 @@ export default defineConfig({
             link: "/web/write",
           },
           {
+            text: "Typescript",
+            link: "/web/Typescript",
+          },
+          {
             text: "浏览器",
             items: [{ text: "Chrome", link: "/web/chrom" }],
           },
@@ -40,7 +44,7 @@ export default defineConfig({
       { text: "后端", link: "/api-examples" },
       { text: "部署", link: "/deploy/index" },
       { text: "数据库", link: "//ccc" },
-      { text: "计算机网络", link: "//ccc" },
+      { text: "计算机网络", link: "/network/curl" },
       { text: "分享", link: "/webintro" },
       { text: "About", link: "/about" },
     ],
@@ -80,6 +84,10 @@ export default defineConfig({
               ],
             },
           ],
+        },
+        {
+            text: "Typescript",
+            link: "/web/Typescript",
         },
         {
           text: "手写代码",
