@@ -1,8 +1,11 @@
 <template>
   <div class="testDiv">
     <h1>{{ title }}</h1>
-    <span>count:{{ count }}</span>
+    <span>count:{{ count }}</span>  
     <button @click="handleClick">点击count ++</button>
+    <div>
+        <input v-model="count" placeholder="输入count值,视图将同步变化"/>
+    </div>
   </div>
 </template>
 <script>
@@ -23,12 +26,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .testDiv {
-  height: 100px;
+  height: 150px;
   border: 1px solid #ccc;
   overflow: hidden;
   padding: 10px;
   span {
     margin-right: 10px;
+    font-weight: bold;
   }
   button {
     cursor: pointer;
@@ -42,6 +46,9 @@ export default {
     padding: 4px 10px;
     border-radius: 4px;
     animation: 4s linear 0s infinite alternate sport;
+  }
+  input{
+    border: 1px solid #ccc;
   }
 }
 
