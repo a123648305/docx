@@ -41,7 +41,23 @@ export default defineConfig({
         ],
       },
       { text: "算法", link: "/algorithm/index" },
-      { text: "后端", link: "/api-examples" },
+      {
+        text: "后端",
+        items: [
+          {
+            text: "Rust",
+            items: [
+              { text: "rust 入门", link: "/server/rust/index" },
+            ],
+          },
+          {
+            text: "nest",
+            items: [
+              { text: "nest 入门", link: "/server/nest/index" }
+            ],
+          },
+        ],
+      },
       { text: "部署", link: "/deploy/index" },
       { text: "数据库", link: "//ccc" },
       { text: "计算机网络", link: "/network/curl" },
@@ -86,8 +102,8 @@ export default defineConfig({
           ],
         },
         {
-            text: "Typescript",
-            link: "/web/Typescript",
+          text: "Typescript",
+          link: "/web/Typescript",
         },
         {
           text: "手写代码",
