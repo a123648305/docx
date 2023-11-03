@@ -36,7 +36,7 @@ export default defineConfig({
           },
           {
             text: "浏览器",
-            items: [{ text: "Chrome", link: "/web/chrom" }],
+            items: [{ text: "Chrome", link: "/web/chrom/index" }],
           },
         ],
       },
@@ -111,7 +111,7 @@ export default defineConfig({
         },
         {
           text: "浏览器",
-          items: [{ text: "Chrom", link: "/web/chrom" }],
+          items: [{ text: "Chrom", link: "/web/chrom/index" },{ text: "Chrom 插件", link: "/web/chrom/plug" }],
         },
       ],
       "/algorithm/": [
