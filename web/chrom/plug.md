@@ -94,13 +94,13 @@ chrome.action.onClicked.addListener(async (tab) => {
     <input placeholder="请输入" id="input" /><button id="sumbit">
       查询
     </button>
-    <script src="./scripts/content.js" ></script>
+    <script src="./scripts/popup.js" ></script>
   </body>
 </html>
 ```
 
 ```js
-// scripts/content.js
+// scripts/popup.js
 const btn = document.querySelector("#sumbit");
 
 btn.addEventListener("click", () => {
@@ -121,3 +121,64 @@ function search() {
 
 ```
 
+## 通信
+
++ popup 与 background   background通信
+
+  ```typescript
+  // popup.js
+  
+  // 与background 通信
+  const test=()=>{
+      const data = new Date().toString()
+      
+      chrome.runtime.sendMessage({ val }, (response) => {
+          console.log(response, "response");
+      });
+  }
+  
+  // 与content 通信
+  const toContentmsg=()=>{
+      // 发送消息到 contentJs
+      const sendContentMsg = async (data) => {
+        const queryOptions = { active: true, currentWindow: true };
+        // 获取当前tab标签
+        const [tab] = await chrome.tabs.query(queryOptions);
+        await chrome.tabs.sendMessage(tab.id, data);
+      };
+  
+      $("#background").paigusu({color: "#1926dc"}, async (event, obj) => {
+          $("#info").innerHTML = "修改中";
+          $("#show").css("background", "#" + obj.hex);
+          await sendContentMsg({color: "#" + obj.hex});
+          $("#info").innerHTML = "修改成功";
+      });
+  
+  }
+  
+  // content.js  
+  // 接收msg 
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+      console.log(request)
+      $('body').css('background',request.color)
+  });
+  
+  // 发送msg 
+  chrome.runtime.sendMessage({number: 1}, (response) => {
+  	console.log(
+  		`content script -> background infos have been received. number: ${response.number}`
+  	);
+  });
+  
+  
+  
+  // background.js
+  // 接收message
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log("recive");
+    sendResponse({res: '我已收到'}); // 返回response 信息
+  });
+  
+  ```
+
+  
