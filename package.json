@@ -5,6 +5,7 @@
   "main": "index.js",
   "author": "wxs",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "git-cz": "^4.9.0",
     "husky": "^8.0.3",
@@ -19,7 +20,7 @@
     }
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
+    "dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "commit": "gitcz"
