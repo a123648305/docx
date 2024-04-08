@@ -145,6 +145,10 @@ export default defineConfig({
           text: "k8s",
           link: "/deploy/k8s",
         },
+        {
+            text: "nginx",
+            link: "/deploy/nginx",
+        },
       ],
     },
 

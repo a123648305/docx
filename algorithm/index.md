@@ -69,3 +69,21 @@ function jump(nums) {
   return stepCount;
 }
 ```
+### 反转数字
+
+123->321  -102->-210  
+注意溢出时 -2^31 <= x <= 2^31 - 1 返回0
+
+```js
+function reverseNum(num) {
+    let res = 0;
+    while(num){
+        res = res * 10 + num % 10;
+        num =~~(num/10); // 等价于取整 Math.floor(num / 10);
+        if(res > Math.pow(2,31)-1 || res < Math.pow(-2,31)){
+            return 0;
+        }
+    }
+    return res;
+}
+```
