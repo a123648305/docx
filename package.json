@@ -26,7 +26,8 @@
     "commit": "gitcz"
   },
   "dependencies": {
-    "vitepress-plugin-pagefind": "^0.2.1"
+    "vitepress-plugin-pagefind": "^0.2.14",
+    "pagefind":"^1.1.0"
   },
   "packageManager": "yarn@1.23.0"
 }

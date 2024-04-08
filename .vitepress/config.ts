@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { pagefindPlugin } from "vitepress-plugin-pagefind";
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -178,6 +178,7 @@ export default defineConfig({
   vite: {
     plugins: [
       pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
         btnPlaceholder: "搜索",
         placeholder: "搜索文档",
         emptyText: "没有匹配搜索结果",
