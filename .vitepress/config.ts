@@ -56,6 +56,7 @@ export default defineConfig({
               { text: "nest 入门", link: "/server/nest/index" }
             ],
           },
+          { text: "Kafka", link: "/server/kafka" },
         ],
       },
       { text: "部署", link: "/deploy/index" },
