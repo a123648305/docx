@@ -130,7 +130,11 @@ export default defineConfig({
         },
         {
           text: "双指针",
-          link: "/web/双指针",
+          link: "/algorithm/双指针",
+        },
+        {
+            text: "动态规划",
+            link: "/algorithm/动态规划",
         },
       ],
       "/deploy/": [
