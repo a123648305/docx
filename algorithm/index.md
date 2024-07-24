@@ -3,24 +3,25 @@
 ![无重复字符的最长子串](/images/3.png)
 
 ```js
-var lengthOfLongestSubstring = function (s) {
-  let i = 0,
-    j = 0,
-    maxlen = 0;
-  const set = new Set();
-
-  while (i < s.length) {
-    if (i > 0) {
-      set.delete(s.charAt(i - 1));
+var lengthOfLongestSubstring = function(s) {
+    const set =new Set();
+    let i=0,j=0,len=0;
+    while(i<s.length){
+        if(i>0){
+            set.delete(s.charAt(i-1))
+        }
+        while(j<s.length){
+            if(!set.has(s.charAt(j))){
+                set.add(s.charAt(j))
+                j++;
+            }else{
+                break;
+            }
+        }
+        len = Math.max(len,j-i);
+        i++
     }
-    while (j < s.length && !set.has(s.charAt(j))) {
-      set.add(s.charAt(j));
-      maxlen = Math.max(maxlen, j - i + 1);
-      j++;
-    }
-    i++;
-  }
-  return maxlen;
+    return len
 };
 ```
 
