@@ -71,3 +71,53 @@ docker build -t <imagename>:<tag> dir  // 根据DockerFile 构建一个镜像
 docker rmi <imageId> // 删除镜像
 docker tag <imageId> <imagename>:<tag> // 给镜像设置一个新tag
 ```
+
+
+
+## docker-compose
++ docker compose 命令是用来管理和运行多个容器的应用的工具 docker compose 命令的用法主要如下：
++ 命令必须在 docker-compose.yml文件所在的目录下执行
++ docker compose [-f=<arg>...] [options] [COMMAND] [ARGS...] 
+    -f, --file FILE 指定使用的 Compose 模板文件，默认为 docker-compose.yml，可以多次指定。
+    -p, --project-name NAME 指定项目名称，默认将使用所在目录名称作为项目名。
+    --verbose 输出更多调试信息。
+    -v, --version 打印版本并退出。
+```
+docker-compose up
+# 后台启动, 启动所有服务并在后台运行。 
+docker-compose up -d
+
+# 停止所有服务。
+docker-compose stop 
+
+restart
+docker-compose restart重启服务容器。
+docker-compose restart # 重启工程中所有服务的容器
+docker-compose restart nginx # 重启工程中指定服务的容器
+
+start
+docker-compose start启动服务容器。
+docker-compose start # 启动工程中所有服务的容器
+docker-compose start nginx # 启动工程中指定服务的容器
+
+stop
+docker-compose stop停止服务容器。
+docker-compose stop # 停止工程中所有服务的容器
+docker-compose stop nginx # 停止工程中指定服务的容器</code></pre> 
+  
+# 构建服务的镜像
+docker-compose build
+
+# 如果服务镜像不存在&#xff0c;则构建镜像并启动服务。
+docker-compose up –build
+
+# 重构服务。
+docker-compose up --force-recreate 
+
+docker-compose ps
+
+# 查看容器的日志。
+docker-compose logs
+
+```
+
