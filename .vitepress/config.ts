@@ -1,5 +1,8 @@
 import { defineConfig } from "vitepress";
-import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
+import {
+  chineseSearchOptimize,
+  pagefindPlugin,
+} from "vitepress-plugin-pagefind";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -38,6 +41,10 @@ export default defineConfig({
             text: "浏览器",
             items: [{ text: "Chrome", link: "/web/chrom/index" }],
           },
+          {
+            text: "设计模式",
+            link: "/web/design",
+          },
         ],
       },
       { text: "算法", link: "/algorithm/index" },
@@ -46,22 +53,42 @@ export default defineConfig({
         items: [
           {
             text: "Rust",
-            items: [
-              { text: "rust 入门", link: "/server/rust/index" },
-            ],
+            items: [{ text: "rust 入门", link: "/server/rust/index" }],
           },
           {
             text: "nest",
-            items: [
-              { text: "nest 入门", link: "/server/nest/index" }
-            ],
+            items: [{ text: "nest 入门", link: "/server/nest/index" }],
           },
           { text: "Kafka", link: "/server/kafka" },
         ],
       },
       { text: "部署", link: "/deploy/index" },
       { text: "数据库", link: "//ccc" },
-      { text: "计算机网络", link: "/network/curl" },
+      {
+        text: "计算机网络",
+        items: [
+          {
+            text: "CURL",
+            link: "/network/curl",
+          },
+          {
+            text: "DNS",
+            link: "/network/dns",
+          },
+          {
+            text: "HTTPS",
+            link: "/network/https",
+          },
+          {
+            text: "TCP",
+            link: "/network/tcp",
+          },
+          {
+            text: "WEBRTC",
+            link: "/network/webrtc",
+          },
+        ],
+      },
       { text: "分享", link: "/webintro" },
       { text: "About", link: "/about" },
     ],
@@ -112,7 +139,10 @@ export default defineConfig({
         },
         {
           text: "浏览器",
-          items: [{ text: "Chrom", link: "/web/chrom/index" },{ text: "Chrom 插件", link: "/web/chrom/plug" }],
+          items: [
+            { text: "Chrom", link: "/web/chrom/index" },
+            { text: "Chrom 插件", link: "/web/chrom/plug" },
+          ],
         },
       ],
       "/algorithm/": [
@@ -133,8 +163,8 @@ export default defineConfig({
           link: "/algorithm/双指针",
         },
         {
-            text: "动态规划",
-            link: "/algorithm/动态规划",
+          text: "动态规划",
+          link: "/algorithm/动态规划",
         },
       ],
       "/deploy/": [
@@ -151,8 +181,8 @@ export default defineConfig({
           link: "/deploy/k8s",
         },
         {
-            text: "nginx",
-            link: "/deploy/nginx",
+          text: "nginx",
+          link: "/deploy/nginx",
         },
       ],
     },

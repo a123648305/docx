@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "时空流逝，伴我之行"
   text: "记录生活的美好"
-  tagline: 12345
+  tagline: 记忆的驿站
   actions:
     - theme: brand
       text: Markdown Examples
