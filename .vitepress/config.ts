@@ -47,7 +47,19 @@ export default defineConfig({
           },
         ],
       },
-      { text: "算法", link: "/algorithm/index" },
+      {
+        text: "算法",
+        items: [
+          {
+            text: "算法",
+            link: "/algorithm/index",
+          },
+          {
+            text: "算法图解",
+            link: "/algorithm/book",
+          },
+        ],
+      },
       {
         text: "后端",
         items: [
